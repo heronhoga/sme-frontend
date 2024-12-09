@@ -14,14 +14,14 @@ import Link from "next/link";
 function Home() {
   return (
     <div>
-      <div className="bg-slate-100 min-h-screen">
+      <div className="bg-gradient-to-t from-[#209cff] to-[#68e0cf] min-h-screen">
         <div
           id="menu-bar"
-          className="bg-sky-700 text-white flex items-center"
+          className="text-white flex items-center font-semibold"
         >
           <Image
-            className="w-24 sm:w-32 md:w-40 ml-4"
-            src="/images/sme.png"
+            className="w-24 sm:w-32 md:w-44 ml-10"
+            src="/images/icon.png"
             alt="Logo"
             width={1000}
             height={1000}
@@ -54,7 +54,6 @@ function Home() {
                 <DropdownMenuItem>
                   <Link href="/register">Daftar</Link>
                 </DropdownMenuItem>
-
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -62,76 +61,73 @@ function Home() {
           <div className="ml-auto hidden sm:block">
             <ul className="mr-8 text-lg sm:text-xl md:text-2xl">
               <li className="inline-block mr-8">
+                <Link href="/login">Beranda</Link>
+              </li>
+              <li className="inline-block mr-8">
+                <Link href="/login">Tentang Kami</Link>
+              </li>
+              <li className="inline-block mr-8">
                 <Link href="/login">Masuk</Link>
               </li>
               <li className="inline-block mr-4">
-                <Link href="/register">Daftar</Link>
+                <Link
+                  href="/register"
+                  className="border border-white p-5 rounded-xl"
+                >
+                  Daftar
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div id="jumbotron-image"m className="mt-10 mx-10 sm:mx-24 md:mx-48">
-          <Image
-            className="w-full h-64 object-cover filter saturate-50 brightness-50 rounded-lg shadow-lg"
-            src="/images/ukm.jpg"
-            alt="ukm"
-            width={5445}
-            height={3637}
-          />
+        <div className="px-10">
+          <hr className="border-t-4" />
         </div>
 
-        <div id="main-content" className="p-4 text-center">
+        <div
+          id="main-content"
+          className="p-4 text-center mt-10 flex flex-col md:flex-row"
+        >
           <div
             id="text-content"
-            className="text-justify mt-4 md:mt-10 mx-10 sm:mx-24 md:mx-48"
+            className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-48 md:w-1/2"
           >
-            <p>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti ante
-              et dolor rutrum ut non curabitur primis. Mus ligula ex porttitor
-              elementum mattis fusce turpis. Orci aliquet primis hendrerit
-              auctor non duis maecenas. Urna hac faucibus curae dui felis vitae
-              taciti. Tincidunt mauris nascetur integer facilisis vehicula.
-            </p>
+            <h1
+              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
+            >
+              Foster Your Potential With US!
+            </h1>
 
-            <p className="mt-4 md:mt-10">
-              Cras hac iaculis purus orci volutpat diam. Tempor facilisi aptent
-              enim dolor efficitur vestibulum, ex id senectus? Convallis dapibus
-              mi primis mus orci netus ullamcorper aliquet. Pharetra mi nascetur
-              ut ac suspendisse sodales eros fringilla! Placerat diam donec
-              semper mi nisl. Suscipit eget aliquet nullam vitae congue
-              bibendum, blandit euismod elementum. Morbi adipiscing odio non
-              velit; est turpis. Inceptos porta sollicitudin senectus curae;
-              mattis purus porttitor. Habitasse habitasse suscipit ridiculus;
-              cras velit ultrices. Per scelerisque faucibus nam nisi commodo
-              tortor in vitae.
-            </p>
-
-            <p className="mt-4 md:mt-10">
-              Libero amet malesuada enim fusce ac rutrum magnis habitasse. Nisi
-              fringilla donec volutpat tortor id. Euismod metus aenean himenaeos
-              venenatis etiam. Primis ex hendrerit tempor, vitae velit penatibus
-              purus morbi. Mus cras sem lacus urna purus malesuada. Fames
-              accumsan litora leo ullamcorper consequat condimentum maximus.
-              Primis quam cras torquent nostra at ad. Mauris vel per vel purus
-              per per conubia semper.
+            <p className="mt-10 text-white font-semibold text-xl sm:text-2xl md:text-3xl">
+              Wadah investasi terpercaya sekaligus pengembangan potensi bisnismu
+              dengan menjadi bagian dari FundiFY
             </p>
 
             <Link href="/register">
               <Button
                 variant="link"
-                className="text-slate-100 bg-sky-700 mt-4 md:mt-10 font-bold p-8 w-48"
+                className="text-slate-100 bg-sky-700 mt-4 md:mt-10 font-bold p-8 w-48 rounded-2xl"
               >
                 Daftar Sekarang!
               </Button>
             </Link>
           </div>
-        </div>
 
-        <div id="footer" className="mt-4 md:mt-10 mx-10 sm:mx-24 md:mx-48">
-          <p className="text-center">
-            &copy; {new Date().getFullYear()} 1000x Innovate
-          </p>
+          <div
+            id="image-content"
+            className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10"
+          >
+            <Image
+              className="object-cover"
+              src="/images/smepic.png"
+              alt="Hero"
+              layout="responsive"
+              width={1920}
+              height={1080}
+            />
+          </div>
         </div>
       </div>
     </div>
