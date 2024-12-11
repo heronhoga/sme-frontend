@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { login } from "../api/auth";
 import {
   AlertDialog,
@@ -13,29 +13,43 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useRouter } from "next/navigation";
 
+interface LoginResponse {
+  status: number;
+  data?: {
+    data: any;
+    token: string;
+    username: string;
+    role: string;
+  };
+  message?: string;
+}
+
+
+
 function Login() {
   const router = useRouter();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [showDialog, setShowDialog] = useState(false);
-  const [role, setRole] = useState("");
-  const [errorDialog, setErrorDialog] = useState(false);
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [showDialog, setShowDialog] = useState<boolean>(false);
+  const [role, setRole] = useState<string>("");
+  const [errorDialog, setErrorDialog] = useState<boolean>(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
-      const response = await login(username, password);
-
-      if (response.status === 200) {
+      const response: LoginResponse = await login(username, password);
+  
+      if (response.status === 200 && response.data) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.data.username);
-
+        
         setRole(response.data.data.role);
+        localStorage.setItem("role", response.data.data.role);
         setShowDialog(true);
-      } else if (response.status === 400) {
+      } else if (response.status === 400 || !response.data) {
         setErrorDialog(true);
       } else {
         console.log(response);
@@ -46,6 +60,7 @@ function Login() {
       setLoading(false);
     }
   };
+  
 
   const handleDialogConfirm = () => {
     console.log("Role inside dialog:", role);
@@ -58,9 +73,8 @@ function Login() {
   };
 
   const handleErrorDialogClose = () => {
-    setErrorDialog(false); 
+    setErrorDialog(false);
   };
-
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
@@ -143,7 +157,10 @@ function Login() {
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel onClick={handleErrorDialogClose} className="bg-red-600 hover:bg-red-700 text-white">
+                <AlertDialogCancel
+                  onClick={handleErrorDialogClose}
+                  className="bg-red-600 hover:bg-red-700 text-white"
+                >
                   Tutup
                 </AlertDialogCancel>
               </AlertDialogFooter>

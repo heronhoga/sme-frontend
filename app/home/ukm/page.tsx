@@ -1,14 +1,15 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import UkmSidebar from "@/components/ui/ukm-sidebar";
+import UkmSidebar from "@/my-components/ukm-sidebar";
 
 function HomeUkm() {
   const [username, setUsername] = React.useState("");
   
   useEffect(() => {
-    setUsername(localStorage.getItem("username"));
+    setUsername(localStorage.getItem("username") ?? "");
   }, []);
+  
   return (
     <div>
       <button
@@ -16,11 +17,11 @@ function HomeUkm() {
         data-drawer-toggle="default-sidebar"
         aria-controls="default-sidebar"
         type="button"
-        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
-        <span class="sr-only">Open sidebar</span>
+        <span className="sr-only">Open sidebar</span>
         <svg
-          class="w-6 h-6"
+          className="w-6 h-6"
           aria-hidden="true"
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -36,13 +37,13 @@ function HomeUkm() {
 
       <UkmSidebar username={username} />
 
-      <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div class="grid grid-cols-3 gap-4 mb-4">
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+      <div className="p-4 sm:ml-64">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -58,10 +59,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -77,10 +78,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -97,10 +98,10 @@ function HomeUkm() {
               </p>
             </div>
           </div>
-          <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+            <p className="text-2xl text-gray-400 dark:text-gray-500">
               <svg
-                class="w-3.5 h-3.5"
+                className="w-3.5 h-3.5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -116,11 +117,11 @@ function HomeUkm() {
               </svg>
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -136,10 +137,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -155,10 +156,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -174,10 +175,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -194,10 +195,10 @@ function HomeUkm() {
               </p>
             </div>
           </div>
-          <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
+          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+            <p className="text-2xl text-gray-400 dark:text-gray-500">
               <svg
-                class="w-3.5 h-3.5"
+                className="w-3.5 h-3.5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -213,11 +214,11 @@ function HomeUkm() {
               </svg>
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -233,10 +234,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -252,10 +253,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -271,10 +272,10 @@ function HomeUkm() {
                 </svg>
               </p>
             </div>
-            <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
