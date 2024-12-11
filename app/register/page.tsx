@@ -28,7 +28,7 @@ function Register() {
   const [role, setRole] = useState("");
   const router = useRouter();
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -36,7 +36,7 @@ function Register() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -45,6 +45,9 @@ function Register() {
 
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
+        localStorage.setItem("username", response.data.data.username);
+        
+        localStorage.setItem("role", response.data.data.role);
 
         setRole(response.data.data.role);
         setShowDialog(true);
