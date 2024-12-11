@@ -15,10 +15,7 @@ function Home() {
   return (
     <div>
       <div className="bg-gradient-to-t from-[#209cff] to-[#68e0cf] min-h-screen">
-        <div
-          id="menu-bar"
-          className="text-white flex items-center font-semibold"
-        >
+        <div id="menu-bar" className="text-white flex items-center font-semibold">
           <Image
             className="w-24 sm:w-32 md:w-44 ml-10"
             src="/images/icon.png"
@@ -28,18 +25,15 @@ function Home() {
           />
 
           <div className="ml-auto sm:hidden">
-            {/* Push the button to the right */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="text-black mr-4 w-16">
+                <Button variant="outline" className="text-black mr-4 w-16 sm:w-20 md:w-24">
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 24 24"
-                    height="36em"
-                    width="36em"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-8 h-8"
                   >
                     <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path>
                   </svg>
@@ -58,7 +52,7 @@ function Home() {
             </DropdownMenu>
           </div>
 
-          <div className="ml-auto hidden sm:block">
+          <nav className="ml-auto hidden sm:block">
             <ul className="mr-8 text-lg sm:text-xl md:text-2xl">
               <li className="inline-block mr-8">
                 <Link href="/">Beranda</Link>
@@ -78,21 +72,15 @@ function Home() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div className="px-10">
           <hr className="border-t-4" />
         </div>
 
-        <div
-          id="main-content"
-          className="p-4 text-center mt-10 flex flex-col md:flex-row"
-        >
-          <div
-            id="text-content"
-            className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2"
-          >
+        <div id="main-content" className="p-4 text-center mt-10 flex flex-col md:flex-row">
+          <div id="text-content" className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2">
             <h1
               className="text-white font-bold text-3xl sm:text-5xl md:text-7xl"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
@@ -108,22 +96,18 @@ function Home() {
             <Link href="/register">
               <Button
                 variant="link"
-                className="text-slate-100 bg-sky-700 mt-4 md:mt-10 font-bold p-8 w-48 rounded-2xl"
+                className="text-slate-100 bg-sky-700 mt-4 md:mt-10 font-bold p-4 sm:p-6 md:p-8 w-48 rounded-2xl"
               >
                 Daftar Sekarang!
               </Button>
             </Link>
           </div>
 
-          <div
-            id="image-content"
-            className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10"
-          >
+          <div id="image-content" className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10">
             <Image
               className="object-contain"
               src="/images/smepic.png"
               alt="SME"
-              layout="responsive"
               width={1920}
               height={1080}
             />
