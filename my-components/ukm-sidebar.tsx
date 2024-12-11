@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 
 function UkmSidebar({ username }: { username: string }) {
   const handleLogout = () => {
-    // clear local storage and redirect to login page
     localStorage.clear();
     window.location.href = "/";
   }

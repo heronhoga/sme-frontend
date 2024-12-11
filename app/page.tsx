@@ -91,7 +91,7 @@ function Home() {
         >
           <div
             id="text-content"
-            className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-48 md:w-1/2"
+            className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2"
           >
             <h1
               className="text-white font-bold text-3xl sm:text-5xl md:text-7xl"
@@ -120,7 +120,7 @@ function Home() {
             className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10"
           >
             <Image
-              className="object-cover"
+              className="object-contain"
               src="/images/smepic.png"
               alt="SME"
               layout="responsive"
