@@ -12,7 +12,7 @@ interface DoughnutChartProps {
 }
 
 const DoughnutChart: React.FC<DoughnutChartProps> = ({ data, options }) => {
-  return <Doughnut data={doughnutChartData} options={doughnutChartOptions} />;
+  return <Doughnut  data={doughnutChartData} options={doughnutChartOptions} />;
 };
 
 export default DoughnutChart;

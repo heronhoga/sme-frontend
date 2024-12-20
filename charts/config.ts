@@ -2,7 +2,7 @@ export const doughnutChartData = {
     labels: ['Growth', 'Target'],
     datasets: [
       {
-        label: 'Growth',
+        label: 'Value',
         data: [12, 19],
         backgroundColor: [
           'rgba(255, 99, 132, 1)',
