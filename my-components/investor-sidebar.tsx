@@ -13,7 +13,7 @@ function InvestorSidebar({ username }: { username: string }) {
     window.location.href = "/";
   };
   return (
-    <div className="w-64 h-screen bg-gradient-to-t from-orange-600 to-orange-300 flex flex-col text-white">
+    <div className="w-64 min-h-screen bg-gradient-to-t from-orange-600 to-orange-300 flex flex-col text-white">
       {/* Sidebar Header */}
       <div className="flex items-center justify-center p-4 border-b border-gray-700">
         <div id="image-sidebar">

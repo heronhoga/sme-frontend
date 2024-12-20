@@ -26,7 +26,7 @@ export const doughnutChartData = {
       },
       circumference: 180,
       rotation: 270,
-      cutout: 90
+      cutout: 90,
     };
   
   
