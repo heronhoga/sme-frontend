@@ -46,20 +46,6 @@ function HomeUkm() {
       totalInvestment: "$500",
       investDate: "2023-11-30",
     },
-    {
-      id: 6,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
-    {
-      id: 7,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
   ];
 
   return (
@@ -79,44 +65,43 @@ function HomeUkm() {
             </div>
 
             <div className="relative">
-  <div className="absolute inset-0 flex flex-col items-center justify-start rounded bg-gray-50 h-[550px] dark:bg-gray-800 shadow-lg p-4 space-y-4 overflow-y-auto">
-    {cardData.map((card) => (
-      <div
-        key={card.id}
-        className="flex items-center bg-white dark:bg-gray-700 rounded shadow-md p-4 w-full"
-      >
-        {/* Image */}
-        <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden flex-shrink-0">
-          <img
-            src={card.imageUrl}
-            alt={card.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        {/* Content */}
-        <div className="ml-4 flex-1">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-            {card.title}
-          </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Total Investment: {card.totalInvestment}
-          </p>
-          <p className="text-xs text-gray-500 dark:text-gray-300">
-            Invest Date: {card.investDate}
-          </p>
-        </div>
-      </div>
-    ))}
-    
-    {/* "Lihat selengkapnya" Card */}
-    <div className="flex items-center rounded p-4 w-full mt-4">
-      <p className="text-center text-orange-500 font-semibold">
-        <a href="/ukm">Lihat selengkapnya</a>
-      </p>
-    </div>
-  </div>
-</div>
+              <div className="absolute inset-0 flex flex-col items-center justify-start rounded bg-gray-50 h-[550px] dark:bg-gray-800 shadow-lg p-4 space-y-4 overflow-y-auto">
+                {cardData.map((card) => (
+                  <div
+                    key={card.id}
+                    className="flex items-center bg-white dark:bg-gray-700 rounded shadow-md p-4 w-full"
+                  >
+                    {/* Image */}
+                    <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden flex-shrink-0">
+                      <img
+                        src={card.imageUrl}
+                        alt={card.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Content */}
+                    <div className="ml-4 flex-1">
+                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Total Investment: {card.totalInvestment}
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-300">
+                        Invest Date: {card.investDate}
+                      </p>
+                    </div>
+                  </div>
+                ))}
 
+                {/* "Lihat selengkapnya" Card */}
+                <div className="flex items-center rounded p-4 w-full mt-4">
+                  <p className="text-center text-orange-500 font-semibold">
+                    <a href="/ukm">Lihat selengkapnya</a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <p className="font-bold text-xl">Portfolio overviews</p>
