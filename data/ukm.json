@@ -2,7 +2,7 @@
   "cards": [
     {
       "id": 1,
-      "imageUrl": "https://via.placeholder.com/64",
+      "imageUrl": "/images/ukm/ukm1.jpeg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Ani",
@@ -13,7 +13,7 @@
     },
     {
       "id": 2,
-      "imageUrl": "https://via.placeholder.com/64",
+      "imageUrl": "/images/ukm/ukm2.jpg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Budi",
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "https://via.placeholder.com/64",
+      "imageUrl": "/images/ukm/ukm3.jpg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Rendi",
@@ -39,7 +39,7 @@
     },
     {
       "id": 4,
-      "imageUrl": "https://via.placeholder.com/64",
+      "imageUrl": "/images/ukm/ukm4.jpeg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Gita",
@@ -52,33 +52,29 @@
     },
     {
       "id": 5,
-      "imageUrl": "https://via.placeholder.com/64",
+      "imageUrl": "/images/ukm/ukm5.jpg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Rendra",
-      "invested": "yes",
-      "investDate": "2023-12-15",
-      "investAmount": "$20,000",
+      "invested": "no",
       "traffic": "12345",
       "sales": "10145",
       "conversion": "8%"
     },
     {
-      "id": 5,
-      "imageUrl": "https://via.placeholder.com/64",
+      "id": 6,
+      "imageUrl": "/images/ukm/ukm6.jpg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Rendra",
-      "invested": "yes",
-      "investDate": "2023-12-15",
-      "investAmount": "$20,000",
+      "invested": "no",
       "traffic": "12345",
       "sales": "10145",
       "conversion": "8%"
     },
     {
-      "id": 5,
-      "imageUrl": "https://via.placeholder.com/64",
+      "id": 7,
+      "imageUrl": "/images/ukm/ukm7.jpg",
       "profile": "Ani Merupakan UKM Kerajinan Tangan berlokasi di Kota Semarang. Produk yang ditawarkan beragam meliputi batik, sapu tangan, anyaman, dan rajutan, Berdiri sejak 1980 dengan ciri khas tradisional jawa tengah",
       "tagLine": "Kerajinan Tangan Khas Jawa Tengah",
       "title": "UMKM Rendra",

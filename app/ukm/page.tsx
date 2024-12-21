@@ -50,7 +50,7 @@ function Ukm() {
 
         <div
           id="card-list"
-          className="border-2 border-gray-200 rounded-lg m-4 h-5/6 p-4 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+          className="border-2 border-gray-200 rounded-lg m-4 h-[500px] p-4 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
         >
           {ukmData.cards.map((card) => (
             <div
@@ -74,10 +74,33 @@ function Ukm() {
               {/* Button */}
               <button
                 onClick={() => (window.location.href = `/ukm/${card.id}`)}
-                className="mt-4 px-4 py-2 bg-orange-600 text-white text-sm rounded-lg hover:bg-blue-700"
+                className="mt-4 px-4 py-2 bg-orange-600 text-white text-sm rounded-lg hover:bg-orange-700"
               >
                 View Details
               </button>
+
+              {/* invest status */}
+              {card.invested === "yes" && (
+                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 text-center flex items-center justify-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-5 h-5 text-green-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <p>
+                    {card.investAmount} - {card.investDate}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
