@@ -11,6 +11,28 @@ function UkmDetail() {
 
   const selectedUkm = ukmData.cards.find((card) => String(card.id) === id.id);
 
+  const [date, setDate] = useState(new Date());
+  const handlePrevious = () => {
+    setDate((prev) => {
+      const newDate = new Date(prev);
+      newDate.setDate(newDate.getDate() - 1);
+      return newDate;
+    });
+  };
+
+  // Function to move to the next date
+  const handleNext = () => {
+    setDate((prev) => {
+      const newDate = new Date(prev);
+      newDate.setDate(newDate.getDate() + 1);
+      return newDate;
+    });
+  };
+
+  const handleSelectDate = (event) => {
+    setDate(new Date(event.target.value));
+  };
+
   useEffect(() => {
     setUsername(localStorage.getItem("username") ?? "");
   }, []);
@@ -21,7 +43,7 @@ function UkmDetail() {
         <div id="navbar">
           <div className="flex items-center justify-between bg-gradient-to-t from-orange-500 to-orange-300 p-4 rounded shadow-md">
             <h1 className="text-2xl font-bold text-white">
-              {selectedUkm?.title}
+              {selectedUkm?.title} - {selectedUkm?.tagLine}
             </h1>
             <div className="relative">
               <button
@@ -135,7 +157,58 @@ function UkmDetail() {
           {/* Right Column */}
           <div className="flex-1 pl-4">
             {/* Content for the right column goes here */}
-            <p>Right Column Content</p>
+            <div
+              id="date-selector"
+              className="flex items-center justify-center space-x-4 p-2 border border-dashed border-gray-300 rounded-lg"
+            >
+              {/* Left Arrow */}
+              <button
+                onClick={handlePrevious}
+                className="text-gray-500 hover:text-black"
+              >
+                ←
+              </button>
+
+              {/* Date Display */}
+              <span className="text-gray-700 font-medium">
+                {date.toISOString().split("T")[0]}
+              </span>
+
+              {/* Right Arrow */}
+              <button
+                onClick={handleNext}
+                className="text-gray-500 hover:text-black"
+              >
+                →
+              </button>
+
+              {/* Date Picker */}
+              <input
+                type="date"
+                value={date.toISOString().split("T")[0]}
+                onChange={handleSelectDate}
+                className="ml-4 p-1 border rounded"
+              />
+            </div>
+
+            {/* traffic, sales, conversion */}
+            <div className="mt-4 items-center space-x-4">
+              <div id="traffic" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
+                <p>Traffic</p>
+                <p>{selectedUkm?.traffic}</p>
+              </div>
+
+              <div id="sales" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
+                <p>Sales</p>
+                <p>{selectedUkm?.sales}</p>
+              </div>
+              
+              
+              <div id="conversion" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
+                <p>Conversion</p>
+                <p>{selectedUkm?.conversion}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
