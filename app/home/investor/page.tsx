@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import InvestorSidebar from "@/my-components/investor-sidebar";
-import DoughnutChart from "@/charts/charts";
+import DoughnutChart from "@/charts/doughnutChart";
 import ukmData from "@/data/ukm.json";
 
 function HomeUkm() {

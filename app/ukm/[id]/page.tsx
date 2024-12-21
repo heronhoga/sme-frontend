@@ -4,6 +4,8 @@ import InvestorSidebar from "@/my-components/investor-sidebar";
 import ukmData from "@/data/ukm.json";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import BarChart from "@/charts/barChart";
+import { Bar } from "react-chartjs-2";
 
 function UkmDetail() {
   const [username, setUsername] = useState<string>("");
@@ -29,7 +31,7 @@ function UkmDetail() {
     });
   };
 
-  const handleSelectDate = (event) => {
+  const handleSelectDate = (event: any) => {
     setDate(new Date(event.target.value));
   };
 
@@ -99,7 +101,7 @@ function UkmDetail() {
               id="invest-status"
               className="mt-4 bg-gradient-to-tr from-orange-500 to-orange-300 text-white rounded-lg p-4"
             >
-              <p className="border border-1 inline-block border-white rounded-lg p-2 flex items-center">
+              <p className="border border-1 border-white rounded-lg p-2 flex items-center">
                 {selectedUkm?.invested === "yes" ? (
                   <>
                     <svg
@@ -148,7 +150,19 @@ function UkmDetail() {
               {selectedUkm?.invested === "yes" && (
                 <div className="mt-2 border border-1 border-white rounded-lg px-2">
                   <p>Invest amount: {selectedUkm?.investAmount}</p>
-                  <p>Started invest from: {selectedUkm?.investDate}</p>
+                  <p>
+                    Started invest from:{" "}
+                    {selectedUkm?.investDate &&
+                      new Date(selectedUkm.investDate).toLocaleDateString(
+                        "en-US",
+                        {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        }
+                      )}
+                  </p>
                 </div>
               )}
             </div>
@@ -192,22 +206,34 @@ function UkmDetail() {
             </div>
 
             {/* traffic, sales, conversion */}
-            <div className="mt-4 items-center space-x-4">
-              <div id="traffic" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
-                <p>Traffic</p>
+            <div className="mt-4 flex items-center space-x-2">
+              <div
+                id="traffic"
+                className="border border-orange-600 rounded-lg p-2 text-center shadow-lg flex-1"
+              >
+                <p className="text-orange-600">Traffic</p>
                 <p>{selectedUkm?.traffic}</p>
               </div>
 
-              <div id="sales" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
-                <p>Sales</p>
+              <div
+                id="sales"
+                className="border border-orange-600 rounded-lg p-2 text-center shadow-lg flex-1"
+              >
+                <p className="text-orange-600">Sales</p>
                 <p>{selectedUkm?.sales}</p>
               </div>
-              
-              
-              <div id="conversion" className="border border-black rounded-lg inline-block p-2 text-center shadow-lg">
-                <p>Conversion</p>
+
+              <div
+                id="conversion"
+                className="border border-orange-600 rounded-lg p-2 text-center shadow-lg flex-1"
+              >
+                <p className="text-orange-600">Conversion</p>
                 <p>{selectedUkm?.conversion}</p>
               </div>
+            </div>
+
+            <div className="mt-4">
+                <BarChart data={undefined} options={undefined} />
             </div>
           </div>
         </div>
