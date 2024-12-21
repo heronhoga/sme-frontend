@@ -14,8 +14,8 @@ function Ukm() {
       <InvestorSidebar username={username} />
       <div className="flex-1 p-4">
         <div id="navbar">
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded shadow-md">
-            <h1 className="text-2xl font-bold text-gray-800">Daftar UKM</h1>
+          <div className="flex items-center justify-between bg-gradient-to-r from-orange-500 to-orange-300 p-4 rounded shadow-md">
+            <h1 className="text-2xl font-bold text-white">Daftar UKM</h1>
             <div className="relative flex items-center">
               <input
                 type="text"
@@ -74,7 +74,7 @@ function Ukm() {
               {/* Button */}
               <button
                 onClick={() => (window.location.href = `/ukm/${card.id}`)}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700"
+                className="mt-4 px-4 py-2 bg-orange-600 text-white text-sm rounded-lg hover:bg-blue-700"
               >
                 View Details
               </button>

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import InvestorSidebar from "@/my-components/investor-sidebar";
 import DoughnutChart from "@/charts/charts";
+import ukmData from "@/data/ukm.json";
 
 function HomeUkm() {
   const [username, setUsername] = useState<string>("");
@@ -9,44 +10,6 @@ function HomeUkm() {
   useEffect(() => {
     setUsername(localStorage.getItem("username") ?? "");
   }, []);
-
-  const cardData = [
-    {
-      id: 1,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Ani",
-      totalInvestment: "$1,000",
-      investDate: "2023-12-15",
-    },
-    {
-      id: 2,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
-    {
-      id: 3,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
-    {
-      id: 4,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
-    {
-      id: 5,
-      imageUrl: "https://via.placeholder.com/64",
-      title: "UMKM Example",
-      totalInvestment: "$500",
-      investDate: "2023-11-30",
-    },
-  ];
 
   return (
     <div className="flex min-h-screen">
@@ -66,8 +29,9 @@ function HomeUkm() {
 
             <div className="relative">
               <div className="absolute inset-0 flex flex-col items-center justify-start rounded bg-gray-50 h-[550px] dark:bg-gray-800 shadow-lg p-4 space-y-4 overflow-y-auto">
-                {cardData.map((card) => (
-                  <div
+                {ukmData.cards.map((card) => (
+                  card.invested === "yes" && (
+                    <div
                     key={card.id}
                     className="flex items-center bg-white dark:bg-gray-700 rounded shadow-md p-4 w-full"
                   >
@@ -85,13 +49,14 @@ function HomeUkm() {
                         {card.title}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Total Investment: {card.totalInvestment}
+                        Total Investment: {card.investAmount}
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-300">
                         Invest Date: {card.investDate}
                       </p>
                     </div>
                   </div>
+                  )
                 ))}
 
                 {/* "Lihat selengkapnya" Card */}

@@ -42,7 +42,7 @@ function InvestorSidebar({ username }: { username: string }) {
 
         <div>
           <Link
-            href="/dashboard"
+            href="/home/investor"
             className="py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-200 flex items-center"
           >
             <LayoutDashboard />
