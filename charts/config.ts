@@ -72,3 +72,31 @@ export const doughnutChartOptions = {
     },
   };
 //BAR CHART
+
+//UKM BAR CHART
+export const ukmBarChartData = {
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
+  datasets: [
+    {
+      label: "Sales",
+      data: [5998, 6560, 6450, 7560, 7670, 9964, 9855, 11200, 9200, 8750, 10000, 9500],
+      backgroundColor: "rgba(20, 100, 199, 0.2)",
+      borderColor: "rgba(20, 100, 199, 1)",
+      borderWidth: 1,
+    },
+  ],
+};
+//UKM BAR CHART

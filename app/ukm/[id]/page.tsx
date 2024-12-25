@@ -5,7 +5,6 @@ import ukmData from "@/data/ukm.json";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import BarChart from "@/charts/barChart";
-import { Bar } from "react-chartjs-2";
 
 function UkmDetail() {
   const [username, setUsername] = useState<string>("");
