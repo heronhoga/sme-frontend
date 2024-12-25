@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import UkmSidebar from "@/my-components/ukm-sidebar";
+import InvestorSidebar from "@/my-components/investor-sidebar";
 
-function ProfileAccountUkm() {
+function ProfileAccountInvestor() {
   const [username, setUsername] = useState<string>("");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
@@ -54,15 +54,15 @@ function ProfileAccountUkm() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <UkmSidebar username={username} />
+      <InvestorSidebar username={username} />
       <div className="flex-1 p-4">
-        <div className="p-4 border-2 border-blue-400 rounded-lg w-full h-full grid grid-cols-2 gap-4">
+        <div className="p-4 border-2 border-orange-400 rounded-lg w-full h-full grid grid-cols-2 gap-4">
           {/* Personal Information */}
           <div className="p-4">
-            <h3 className="font-semibold text-xl border border-blue-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-2">
+            <h3 className="font-semibold text-xl border border-orange-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-orange-600 to-orange-300 p-2">
               Personal Informations
             </h3>
-            <div className="bg-gradient-to-tr from-[#209cff] to-[#68e0cf] p-4 rounded-lg mt-4 text-white">
+            <div className="bg-gradient-to-tr from-orange-600 to-orange-300 p-4 rounded-lg mt-4 text-white">
               <div className="flex flex-col items-center justify-center mb-4 space-y-2">
                 <img
                   src={profilePicture}
@@ -71,7 +71,7 @@ function ProfileAccountUkm() {
                 />
                 <label
                   htmlFor="fileInput"
-                  className="cursor-pointer bg-blue-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-600 shadow-lg"
+                  className="cursor-pointer bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-600 shadow-lg"
                 >
                   Choose File
                 </label>
@@ -155,7 +155,7 @@ function ProfileAccountUkm() {
               </div>
               <button
                 onClick={handleSaveChanges}
-                className="bg-blue-600 border text-sm text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-800"
+                className="bg-orange-600 border text-sm text-white px-4 py-2 rounded-lg mt-4 hover:bg-orange-800"
               >
                 Save Changes
               </button>
@@ -163,51 +163,51 @@ function ProfileAccountUkm() {
           </div>
 
           {/* Settings */}
-          <div className="p-4 border-l-2 border-blue-400">
-            <h3 className="font-semibold text-xl border border-blue-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-2">
+          <div className="p-4 border-l-2 border-orange-400">
+            <h3 className="font-semibold text-xl border border-orange-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-orange-600 to-orange-300 p-2">
               Application Settings
             </h3>
-            <div className="mt-4 space-y-4 bg-gradient-to-tr from-[#209cff] to-[#68e0cf] p-4 rounded-lg text-white">
+            <div className="mt-4 space-y-4 bg-gradient-to-tr from-orange-600 to-orange-300 p-4 rounded-lg text-white">
               <div className="flex items-center justify-between">
                 <span>Notify me when new updates are available</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
                 <span>Send email updates</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
                 <span>Show online status</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
                 <span>Enable dark mode</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
                 <span>Allow push notifications</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
                 <span>Receive monthly reports</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                  <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
             </div>
@@ -218,4 +218,4 @@ function ProfileAccountUkm() {
   );
 }
 
-export default ProfileAccountUkm;
+export default ProfileAccountInvestor;

@@ -49,7 +49,7 @@ function InvestorSidebar({ username }: { username: string }) {
             <p className="ml-5">Dashboard</p>
           </Link>
           <Link
-            href="/profile"
+            href="/profile/investor"
             className="py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-200 flex items-center"
           >
             <UserPen />
@@ -62,13 +62,6 @@ function InvestorSidebar({ username }: { username: string }) {
           >
             <Store />
             <p className="ml-5">Ukm</p>
-          </Link>
-          <Link
-            href="/ukm"
-            className="py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-200 flex items-center"
-          >
-            <Settings />
-            <p className="ml-5">Pengaturan</p>
           </Link>
           <hr className="my-2" />
           <Link

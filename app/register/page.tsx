@@ -46,6 +46,8 @@ function Register() {
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.data.username);
+        localStorage.setItem("firstName", response.data.data.first_name);
+        localStorage.setItem("lastName", response.data.data.last_name);
         
         localStorage.setItem("role", response.data.data.role);
 

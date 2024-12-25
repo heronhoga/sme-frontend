@@ -5,6 +5,17 @@ import ukmData from "@/data/ukm.json";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import BarChart from "@/charts/barChart";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 function UkmDetail() {
   const [username, setUsername] = useState<string>("");
@@ -141,9 +152,26 @@ function UkmDetail() {
               </p>
 
               {selectedUkm?.invested === "no" && (
-                <Button className="bg-white text-orange-600 rounded-lg p-2 mt-2">
-                  Invest Now
-                </Button>
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <Button className="bg-white text-orange-600 rounded-lg p-2 mt-2">
+                      Invest Now
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>Confirm Investment</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        Are you sure you want to invest now? This action cannot
+                        be undone.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                      <AlertDialogAction className="bg-orange-600">Confirm</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
               )}
 
               {selectedUkm?.invested === "yes" && (
@@ -232,7 +260,7 @@ function UkmDetail() {
             </div>
 
             <div className="mt-4">
-                <BarChart data={undefined} options={undefined} />
+              <BarChart data={undefined} options={undefined} />
             </div>
           </div>
         </div>
