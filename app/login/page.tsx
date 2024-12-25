@@ -45,6 +45,8 @@ function Login() {
       if (response.status === 200 && response.data) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.data.username);
+        localStorage.setItem("firstName", response.data.data.first_name);
+        localStorage.setItem("lastName", response.data.data.last_name);
         
         setRole(response.data.data.role);
         localStorage.setItem("role", response.data.data.role);

@@ -5,9 +5,13 @@ import UkmBarChart from "@/charts/ukmBarChart";
 
 function HomeUkm() {
   const [username, setUsername] = useState<string>("");
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
 
   useEffect(() => {
     setUsername(localStorage.getItem("username") ?? "");
+    setFirstName(localStorage.getItem("firstName") ?? "");
+    setLastName(localStorage.getItem("lastName") ?? "");
   }, []);
 
   const currentDate = new Date().toLocaleDateString();
@@ -26,13 +30,17 @@ function HomeUkm() {
 
   const shiftDates1 = (direction: any) => {
     const shiftDays = direction === "backward" ? -1 : 1;
-    setStartDate1(new Date(startDate1.setDate(startDate1.getDate() + shiftDays)));
+    setStartDate1(
+      new Date(startDate1.setDate(startDate1.getDate() + shiftDays))
+    );
     setEndDate1(new Date(endDate1.setDate(endDate1.getDate() + shiftDays)));
   };
 
   const shiftDates2 = (direction: any) => {
     const shiftDays = direction === "backward" ? -1 : 1;
-    setStartDate2(new Date(startDate2.setDate(startDate2.getDate() + shiftDays)));
+    setStartDate2(
+      new Date(startDate2.setDate(startDate2.getDate() + shiftDays))
+    );
     setEndDate2(new Date(endDate2.setDate(endDate2.getDate() + shiftDays)));
   };
 
@@ -49,7 +57,7 @@ function HomeUkm() {
       <div className="flex-1 p-4">
         <div id="navbar">
           <div className="flex items-center justify-between bg-gradient-to-t from-[#209cff] to-[#68e0cf] p-4 rounded shadow-md">
-            <h1 className="text-2xl font-bold text-white">Ukm - {username}</h1>
+            <h1 className="text-2xl font-bold text-white">Ukm - {firstName} {lastName}</h1>
           </div>
         </div>
 

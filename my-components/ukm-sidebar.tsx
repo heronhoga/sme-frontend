@@ -15,7 +15,7 @@ function UkmSidebar({ username }: { username: string }) {
   return (
     <div className="w-64 h-screen bg-gradient-to-t from-[#209cff] to-[#68e0cf] flex flex-col text-white">
       {/* Sidebar Header */}
-      <div className="flex items-center justify-center p-4 border-b border-gray-700">
+      <div className="flex items-center justify-center p-4 border-b ">
         <div id="image-sidebar">
           <Image src="/images/icon.png" alt="Logo" width={128} height={128} />
         </div>
@@ -70,7 +70,7 @@ function UkmSidebar({ username }: { username: string }) {
             <Settings />
             <p className="ml-5">Pengaturan</p>
           </Link>
-          <hr />
+          <hr className="my-2" />
           <Link
             href="#"
             className="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-200"
