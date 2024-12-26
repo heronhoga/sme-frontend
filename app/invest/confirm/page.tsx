@@ -12,14 +12,17 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { useToast } from "@/hooks/use-toast";
 
 function InvestConfirm() {
   const [username, setUsername] = useState<string>("");
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     setUsername(localStorage.getItem("username") ?? "");
   }, []);
 
+  const { toast } = useToast();
   return (
     <div className="min-h-screen flex">
       {/* Sidebar */}
@@ -34,7 +37,10 @@ function InvestConfirm() {
           <h1 className="text-2xl font-bold text-white mb-3">
             Form Konfirmasi Investasi
           </h1>
-          <form className="space-y-2">
+          <form
+            onSubmit={(event) => event.preventDefault()}
+            className="space-y-2"
+          >
             {/* Nama */}
             <div>
               <label
@@ -144,16 +150,47 @@ function InvestConfirm() {
                   </div>
                   <AlertDialogFooter>
                     <AlertDialogCancel>Batal</AlertDialogCancel>
-                    <AlertDialogAction>Setuju</AlertDialogAction>
+                    <AlertDialogAction className="bg-orange-600">
+                      Setuju
+                    </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
-              <button
-                type="submit"
-                className="my-2 w-full py-3 bg-white text-orange-600 font-bold rounded-md hover:bg-orange-100 focus:outline-none focus:ring focus:ring-orange-500"
-              >
-                Konfirmasi Investasi
-              </button>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <button
+                    type="submit"
+                    className="my-3 w-full py-3 bg-white text-orange-600 font-bold rounded-md hover:bg-orange-100 focus:outline-none focus:ring focus:ring-orange-500"
+                  >
+                    Konfirmasi Investasi
+                  </button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>
+                      Konfirmasi Investasi
+                    </AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Apakah Anda yakin ingin melakukan investasi?
+                      Investasi Anda tidak dapat diubah setelah dikonfirmasi.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Batal</AlertDialogCancel>
+                    <AlertDialogAction
+                    className="bg-orange-600"
+                      onClick={() => {
+                        toast({
+                          title: "Sukses!",
+                          description: "Pengajuan investasi berhasil dikirim.",
+                        });
+                      }}
+                    >
+                      Lanjutkan
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </form>
         </div>
