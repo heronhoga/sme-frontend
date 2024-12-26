@@ -23,6 +23,12 @@ function UkmDetail() {
 
   const selectedUkm = ukmData.cards.find((card) => String(card.id) === id.id);
 
+  const handleInvestNow = (id: any) => {
+    if (id) {
+      window.open(`/invest/confirm`, '_blank');
+    }
+  };
+
   const [date, setDate] = useState(new Date());
   const handlePrevious = () => {
     setDate((prev) => {
@@ -168,7 +174,7 @@ function UkmDetail() {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction className="bg-orange-600">Confirm</AlertDialogAction>
+                      <AlertDialogAction className="bg-orange-600" onClick={() => handleInvestNow(selectedUkm?.id)}>Confirm</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
