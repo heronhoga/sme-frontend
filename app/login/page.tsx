@@ -96,7 +96,7 @@ function Login() {
               <h3 className="text-sm">Kembali</h3>
             </Link>
           </div>
-          <h2 className="text-2xl font-semibold text-center">Daftar</h2>
+          <h2 className="text-2xl font-semibold text-center">Masuk</h2>
         </div>
         <form onSubmit={handleSubmit} className="mt-10">
           <div className="mb-4">
