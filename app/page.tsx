@@ -15,7 +15,10 @@ function Home() {
   return (
     <div>
       <div className="bg-gradient-to-t from-[#209cff] to-[#68e0cf] min-h-screen">
-        <div id="menu-bar" className="text-white flex items-center font-semibold">
+        <div
+          id="menu-bar"
+          className="text-white flex items-center font-semibold"
+        >
           <Image
             className="w-24 sm:w-32 md:w-44 ml-10"
             src="/images/icon.png"
@@ -27,7 +30,10 @@ function Home() {
           <div className="ml-auto sm:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="text-black mr-4 w-16 sm:w-20 md:w-24">
+                <Button
+                  variant="outline"
+                  className="text-black mr-4 w-16 sm:w-20 md:w-24"
+                >
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
@@ -79,8 +85,14 @@ function Home() {
           <hr className="border-t-4" />
         </div>
 
-        <div id="main-content" className="p-4 text-center mt-10 flex flex-col md:flex-row">
-          <div id="text-content" className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2">
+        <div
+          id="main-content"
+          className="p-4 text-center mt-10 flex flex-col md:flex-row"
+        >
+          <div
+            id="text-content"
+            className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2"
+          >
             <h1
               className="text-white font-bold text-3xl sm:text-5xl md:text-7xl"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
@@ -96,14 +108,17 @@ function Home() {
             <Link href="/register">
               <Button
                 variant="link"
-                className="text-slate-100 bg-sky-700 mt-4 md:mt-10 font-bold p-4 sm:p-6 md:p-8 w-48 rounded-2xl"
+                className="text-slate-100 bg-sky-700 my-4 md:my-10 font-bold p-4 sm:p-6 md:p-8 w-48 rounded-2xl"
               >
                 Daftar Sekarang!
               </Button>
             </Link>
           </div>
 
-          <div id="image-content" className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10">
+          <div
+            id="image-content"
+            className="w-full md:w-1/4 flex justify-center aspect-w-16 aspect-h-9 mt-10"
+          >
             <Image
               className="object-contain"
               src="/images/smepic.png"
@@ -113,7 +128,14 @@ function Home() {
             />
           </div>
         </div>
+
       </div>
+
+      <footer className="bg-gray-800 text-white p-4 text-center">
+          <div>
+            <p>&copy; 2024 Niago. All rights reserved.</p>
+          </div>
+        </footer>
     </div>
   );
 }

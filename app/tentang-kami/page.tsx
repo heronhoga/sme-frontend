@@ -95,7 +95,15 @@ function TentangKami() {
             </p>
           </div>
         </div>
+
+
       </div>
+
+      <footer className="bg-gray-800 text-white p-4 text-center">
+          <div>
+            <p>&copy; 2024 Niago. All rights reserved.</p>
+          </div>
+        </footer>
     </div>
   );
 }
