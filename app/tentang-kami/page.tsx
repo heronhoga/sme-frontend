@@ -111,7 +111,7 @@ function TentangKami() {
             </h1>
 
             <p className="mt-10 mx-10 text-white font-semibold text-lg sm:text-xl md:text-2xl">
-              <span>Niago</span> merupakan platform yang memberikan kemudahan
+              <span>Sinergo</span> merupakan platform yang memberikan kemudahan
               untuk menampung investasi dan pengembangan UKM. Kami menyediakan
               berbagai layanan untuk memudahkan pengelolaan investasi bagi
               investor dan pendanaan UKM!
@@ -122,7 +122,7 @@ function TentangKami() {
 
       <footer className="bg-gray-800 text-white p-4 text-center">
         <div>
-          <p>&copy; 2024 Niago. All rights reserved.</p>
+          <p>&copy; 2024 Sinergo. All rights reserved.</p>
         </div>
       </footer>
     </div>

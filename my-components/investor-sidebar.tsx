@@ -20,7 +20,7 @@ function InvestorSidebar({ username }: { username: string }) {
           <Image src="/images/icon.png" alt="Logo" width={128} height={128} />
         </div>
         <h1
-          className="text-2xl font-semibold p-3 border rounded-xl border-t-4"
+          className="text-2xl font-semibold p-3 border rounded-xl border-t-4 ml-1"
           style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 1)" }}
         >
           Investor

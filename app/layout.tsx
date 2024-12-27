@@ -10,8 +10,8 @@ const poppinsRegular = localFont({
 
 
 export const metadata = {
-  title: "Niago - Platform untuk investasi UKM",
-  description: "Niago - Platform untuk investasi UKM",
+  title: "Sinergo - Platform untuk investasi UKM",
+  description: "Sinergo - Platform untuk investasi UKM",
 };
 
 export default function RootLayout({

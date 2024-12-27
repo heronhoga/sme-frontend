@@ -115,7 +115,7 @@ function Home() {
 
             <p className="mt-10 text-white font-semibold text-xl sm:text-2xl md:text-3xl">
               Wadah investasi terpercaya sekaligus pengembangan potensi bisnismu
-              dengan menjadi bagian dari Niago
+              dengan menjadi bagian dari Sinergo
             </p>
 
             <Link href="/register">
@@ -145,7 +145,7 @@ function Home() {
 
       <footer className="bg-gray-800 text-white p-4 text-center">
         <div>
-          <p>&copy; 2024 Niago. All rights reserved.</p>
+          <p>&copy; 2024 Sinergo. All rights reserved.</p>
         </div>
       </footer>
     </div>
