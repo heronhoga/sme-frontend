@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, FormEvent } from "react"; 
+import React, { useState, FormEvent } from "react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -33,6 +33,8 @@ function Login() {
   const [showDialog, setShowDialog] = useState<boolean>(false);
   const [role, setRole] = useState<string>("");
   const [errorDialog, setErrorDialog] = useState<boolean>(false);
+  const [showInformationDialog, setShowInformationDialog] =
+    useState<boolean>(true);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,7 +45,7 @@ function Login() {
       const user = userData.users.find(
         (user) => user.username === username && user.password === password
       );
-      
+
       if (!user) {
         setErrorDialog(true);
         return;
@@ -176,6 +178,38 @@ function Login() {
                 <AlertDialogCancel
                   onClick={handleErrorDialogClose}
                   className="bg-red-600 hover:bg-red-700 text-white"
+                >
+                  Tutup
+                </AlertDialogCancel>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        )}
+
+        {showInformationDialog && (
+          <AlertDialog
+            open={showInformationDialog}
+            onOpenChange={setShowInformationDialog}
+          >
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle className="text-center border p-2 rounded-lg border-black">Informasi Penting !</AlertDialogTitle>
+                <AlertDialogDescription className="text-black font-semibold">
+                  Karena ini merupakan aplikasi demo, mohon masukkan data
+                  berikut sesuai dengan role yang akan dicoba. <br /> <br />{" "}
+                  untuk login sebagai akun Investor:
+                  <br></br>
+                  <p className="text-xl">username: investor</p>
+                  <p className="text-xl">password: investor</p>
+                  <br></br>Untuk login sebagai akun Ukm:
+                  <p className="text-xl">username: ukm</p>
+                  <p className="text-xl">password: ukm</p>
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel
+                  onClick={handleErrorDialogClose}
+                  className="bg-red-600 hover:bg-red-800 text-white hover:text-white"
                 >
                   Tutup
                 </AlertDialogCancel>
