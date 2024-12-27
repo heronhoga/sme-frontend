@@ -60,7 +60,7 @@ function ProfileAccountUkm() {
           {/* Personal Information */}
           <div className="p-4">
             <h3 className="font-semibold text-xl border border-blue-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-2">
-              Personal Informations
+            Informasi Pribadi
             </h3>
             <div className="bg-gradient-to-tr from-[#209cff] to-[#68e0cf] p-4 rounded-lg mt-4 text-white">
               <div className="flex flex-col items-center justify-center mb-4 space-y-2">
@@ -73,7 +73,7 @@ function ProfileAccountUkm() {
                   htmlFor="fileInput"
                   className="cursor-pointer bg-blue-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-600 shadow-lg"
                 >
-                  Choose File
+                  Pilih Foto
                 </label>
                 <input
                   id="fileInput"
@@ -84,8 +84,8 @@ function ProfileAccountUkm() {
                 />
                 <span className="text-white text-sm">
                   {profilePicture === "https://via.placeholder.com/150"
-                    ? "No file chosen"
-                    : "File chosen"}
+                    ? "Tidak ada foto"
+                    : "Foto tersedia"}
                 </span>
               </div>
 
@@ -100,7 +100,7 @@ function ProfileAccountUkm() {
                   />
                 </label>
                 <label>
-                  <strong>First Name:</strong>
+                  <strong>Nama Depan:</strong>
                   <input
                     type="text"
                     value={firstName}
@@ -109,7 +109,7 @@ function ProfileAccountUkm() {
                   />
                 </label>
                 <label>
-                  <strong>Last Name:</strong>
+                  <strong>Nama Belakang:</strong>
                   <input
                     type="text"
                     value={lastName}
@@ -118,7 +118,7 @@ function ProfileAccountUkm() {
                   />
                 </label>
                 <label>
-                  <strong>Birth Date:</strong>
+                  <strong>Tanggal Lahir:</strong>
                   <input
                     type="date"
                     value={birthDate}
@@ -127,7 +127,7 @@ function ProfileAccountUkm() {
                   />
                 </label>
                 <label>
-                  <strong>Country:</strong>
+                  <strong>Negara:</strong>
                   <input
                     type="text"
                     value={country}
@@ -136,7 +136,7 @@ function ProfileAccountUkm() {
                   />
                 </label>
                 <label>
-                  <strong>Address:</strong>
+                  <strong>Alamat:</strong>
                   <textarea
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -144,7 +144,7 @@ function ProfileAccountUkm() {
                   ></textarea>
                 </label>
                 <label>
-                  <strong>Postal Code:</strong>
+                  <strong>Kode pos:</strong>
                   <input
                     type="text"
                     value={postalCode}
@@ -157,7 +157,7 @@ function ProfileAccountUkm() {
                 onClick={handleSaveChanges}
                 className="bg-blue-600 border text-sm text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-800"
               >
-                Save Changes
+                Simpan Perubahan
               </button>
             </div>
           </div>

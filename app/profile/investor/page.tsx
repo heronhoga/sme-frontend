@@ -100,7 +100,7 @@ function ProfileAccountInvestor() {
                   />
                 </label>
                 <label>
-                  <strong>First Name:</strong>
+                  <strong>Nama Depan:</strong>
                   <input
                     type="text"
                     value={firstName}
@@ -109,7 +109,7 @@ function ProfileAccountInvestor() {
                   />
                 </label>
                 <label>
-                  <strong>Last Name:</strong>
+                  <strong>Nama Belakang:</strong>
                   <input
                     type="text"
                     value={lastName}
@@ -118,7 +118,7 @@ function ProfileAccountInvestor() {
                   />
                 </label>
                 <label>
-                  <strong>Birth Date:</strong>
+                  <strong>Tanggal Lahir:</strong>
                   <input
                     type="date"
                     value={birthDate}
@@ -127,7 +127,7 @@ function ProfileAccountInvestor() {
                   />
                 </label>
                 <label>
-                  <strong>Country:</strong>
+                  <strong>Negara:</strong>
                   <input
                     type="text"
                     value={country}
@@ -136,7 +136,7 @@ function ProfileAccountInvestor() {
                   />
                 </label>
                 <label>
-                  <strong>Address:</strong>
+                  <strong>Alamat:</strong>
                   <textarea
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -144,7 +144,7 @@ function ProfileAccountInvestor() {
                   ></textarea>
                 </label>
                 <label>
-                  <strong>Postal Code:</strong>
+                  <strong>kode pos:</strong>
                   <input
                     type="text"
                     value={postalCode}
