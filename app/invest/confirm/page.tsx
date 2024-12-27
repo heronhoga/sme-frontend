@@ -167,22 +167,21 @@ function InvestConfirm() {
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>
-                      Konfirmasi Investasi
-                    </AlertDialogTitle>
+                    <AlertDialogTitle>Konfirmasi Investasi</AlertDialogTitle>
                     <AlertDialogDescription>
-                      Apakah Anda yakin ingin melakukan investasi?
-                      Investasi Anda tidak dapat diubah setelah dikonfirmasi.
+                      Apakah Anda yakin ingin melakukan investasi? Investasi
+                      Anda tidak dapat diubah setelah dikonfirmasi.
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
-                    <AlertDialogCancel>Batal</AlertDialogCancel>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
                     <AlertDialogAction
-                    className="bg-orange-600"
+                      className="bg-orange-500"
                       onClick={() => {
                         toast({
                           title: "Sukses!",
                           description: "Pengajuan investasi berhasil dikirim.",
+                          className: "border border-2 border-orange-300 text-orange-600 font-bold shadow-lg",
                         });
                       }}
                     >

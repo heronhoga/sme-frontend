@@ -88,8 +88,8 @@ function TentangKami() {
               Join Us!
             </h1>
 
-            <p className="mt-10 mx-10 text-white font-semibold text-xl sm:text-2xl md:text-3xl">
-              FundiFY merupakan platform yang memberikan kemudahan untuk menampung
+            <p className="mt-10 mx-10 text-white font-semibold text-lg sm:text-xl md:text-2xl">
+              Niago merupakan platform yang memberikan kemudahan untuk menampung
               investasi dan pengembangan UKM. Kami menyediakan berbagai layanan untuk memudahkan
               pengelolaan investasi bagi investor dan pendanaan UKM!
             </p>

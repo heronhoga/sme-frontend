@@ -90,7 +90,7 @@ function Home() {
 
             <p className="mt-10 text-white font-semibold text-xl sm:text-2xl md:text-3xl">
               Wadah investasi terpercaya sekaligus pengembangan potensi bisnismu
-              dengan menjadi bagian dari FundiFY
+              dengan menjadi bagian dari Niago
             </p>
 
             <Link href="/register">
