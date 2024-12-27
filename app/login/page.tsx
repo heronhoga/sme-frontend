@@ -12,6 +12,8 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 interface LoginResponse {
   status: number;
@@ -23,8 +25,6 @@ interface LoginResponse {
   };
   message?: string;
 }
-
-
 
 function Login() {
   const router = useRouter();
@@ -38,16 +38,16 @@ function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-  
+
     try {
       const response: LoginResponse = await login(username, password);
-  
+
       if (response.status === 200 && response.data) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.data.username);
         localStorage.setItem("firstName", response.data.data.first_name);
         localStorage.setItem("lastName", response.data.data.last_name);
-        
+
         setRole(response.data.data.role);
         localStorage.setItem("role", response.data.data.role);
         setShowDialog(true);
@@ -62,7 +62,6 @@ function Login() {
       setLoading(false);
     }
   };
-  
 
   const handleDialogConfirm = () => {
     console.log("Role inside dialog:", role);
@@ -82,10 +81,21 @@ function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
       <div
         id="login-card"
-        className="w-96 h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-8"
+        className="w-96 h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-4"
       >
-        <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
-        <form onSubmit={handleSubmit}>
+        <div className="relative flex items-center justify-center mb-3">
+          <div className="absolute left-0 flex items-center">
+            <Link
+              href="/"
+              className="flex items-center text-black hover:underline"
+            >
+              <ChevronLeft className="mr-2 text-xl" />
+              <h3 className="text-sm">Kembali</h3>
+            </Link>
+          </div>
+          <h2 className="text-2xl font-semibold text-center">Daftar</h2>
+        </div>
+        <form onSubmit={handleSubmit} className="mt-10">
           <div className="mb-4">
             <label
               htmlFor="username"
@@ -99,7 +109,7 @@ function Login() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
-              placeholder="Enter your username"
+              placeholder="Masukkan username Anda"
               required
             />
           </div>
@@ -116,9 +126,12 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
-              placeholder="Enter your password"
+              placeholder="Masukkan password Anda"
               required
             />
+          </div>
+          <div className="text-center mb-4 text-blue-800 hover:text-blue-950 hover:underline">
+            <Link href="/register">Belum punya akun? Daftar sekarang</Link>
           </div>
           <button
             type="submit"

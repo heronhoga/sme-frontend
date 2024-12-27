@@ -12,6 +12,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 function Register() {
   const [loading, setLoading] = useState(false);
@@ -28,7 +30,7 @@ function Register() {
   const [role, setRole] = useState("");
   const router = useRouter();
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -48,7 +50,7 @@ function Register() {
         localStorage.setItem("username", response.data.data.username);
         localStorage.setItem("firstName", response.data.data.first_name);
         localStorage.setItem("lastName", response.data.data.last_name);
-        
+
         localStorage.setItem("role", response.data.data.role);
 
         setRole(response.data.data.role);
@@ -78,7 +80,7 @@ function Register() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
         <div
           id="register-card"
-          className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-8"
+          className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-10"
         >
           <p className="text-center">Loading...</p>
         </div>
@@ -90,12 +92,20 @@ function Register() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
       <div
         id="register-card"
-        className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-8"
+        className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-4"
       >
-        <h2 className="text-2xl font-semibold mb-6 text-center">Daftar</h2>
-        <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+    <div className="relative flex items-center justify-center mb-3">
+      <div className="absolute left-0 flex items-center">
+        <Link href="/" className="flex items-center text-black hover:underline">
+          <ChevronLeft className="mr-2 text-xl" />
+          <h3 className="text-sm">Kembali</h3>
+        </Link>
+      </div>
+      <h2 className="text-2xl font-semibold text-center">Daftar</h2>
+    </div>
+        <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 mt-8">
           {/* Form fields */}
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="first_name"
               className="block text-sm font-medium text-slate-700"
@@ -114,7 +124,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="last_name"
               className="block text-sm font-medium text-slate-700"
@@ -133,7 +143,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-slate-700"
@@ -152,7 +162,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="phone"
               className="block text-sm font-medium text-slate-700"
@@ -171,7 +181,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="username"
               className="block text-sm font-medium text-slate-700"
@@ -190,7 +200,7 @@ function Register() {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-1">
             <label
               htmlFor="password"
               className="block text-sm font-medium text-slate-700"
@@ -229,6 +239,12 @@ function Register() {
             </select>
           </div>
 
+          <div className="col-span-2">
+            <div className="text-center text-blue-800 hover:text-blue-950 hover:underline">
+              <Link href="/login">Sudah punya akun? masuk di sini</Link>
+            </div>
+          </div>
+
           <button
             type="submit"
             className="w-full py-3 text-white font-semibold rounded-md bg-sky-600 hover:bg-sky-700 col-span-2"
@@ -243,14 +259,14 @@ function Register() {
               <AlertDialogHeader>
                 <AlertDialogTitle>Berhasil Registrasi</AlertDialogTitle>
                 <AlertDialogDescription>
-                Lanjut ke halaman Dashboard?
+                  Lanjut ke halaman Dashboard?
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel onClick={() => setShowDialog(false)}>
                   Tidak
                 </AlertDialogCancel>
-                <AlertDialogAction onClick={handleDialogConfirm} >
+                <AlertDialogAction onClick={handleDialogConfirm}>
                   Ya
                 </AlertDialogAction>
               </AlertDialogFooter>

@@ -82,7 +82,7 @@ function UkmDetail() {
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
-                <span className="text-lg font-medium">Back</span>
+                <span className="text-lg font-medium">Kembali</span>
               </button>
             </div>
           </div>
@@ -134,7 +134,7 @@ function UkmDetail() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    Invested
+                    Diinvestasikan
                   </>
                 ) : (
                   <>
@@ -152,7 +152,7 @@ function UkmDetail() {
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>
-                    Not Invested
+                    Belum diinvestasikan
                   </>
                 )}
               </p>
@@ -161,20 +161,19 @@ function UkmDetail() {
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button className="bg-white text-orange-600 rounded-lg p-2 mt-2">
-                      Invest Now
+                      Investasi sekarang
                     </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Confirm Investment</AlertDialogTitle>
+                      <AlertDialogTitle>Konfirmasi Investasi</AlertDialogTitle>
                       <AlertDialogDescription>
-                        Are you sure you want to invest now? This action cannot
-                        be undone.
+                        Apakah anda yakin ingin melakukan investasi sekarang?
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction className="bg-orange-600" onClick={() => handleInvestNow(selectedUkm?.id)}>Confirm</AlertDialogAction>
+                      <AlertDialogCancel>Batal</AlertDialogCancel>
+                      <AlertDialogAction className="bg-orange-600" onClick={() => handleInvestNow(selectedUkm?.id)}>Konfirmasi</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
@@ -182,12 +181,12 @@ function UkmDetail() {
 
               {selectedUkm?.invested === "yes" && (
                 <div className="mt-2 border border-1 border-white rounded-lg px-2">
-                  <p>Invest amount: {selectedUkm?.investAmount}</p>
+                  <p>Total investasi: {selectedUkm?.investAmount}</p>
                   <p>
-                    Started invest from:{" "}
+                    Tanggal Investasi:{" "}
                     {selectedUkm?.investDate &&
                       new Date(selectedUkm.investDate).toLocaleDateString(
-                        "en-US",
+                        "id-ID",
                         {
                           weekday: "long",
                           year: "numeric",

@@ -60,7 +60,7 @@ function ProfileAccountInvestor() {
           {/* Personal Information */}
           <div className="p-4">
             <h3 className="font-semibold text-xl border border-orange-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-orange-600 to-orange-300 p-2">
-              Personal Informations
+              Informasi Pribadi
             </h3>
             <div className="bg-gradient-to-tr from-orange-600 to-orange-300 p-4 rounded-lg mt-4 text-white">
               <div className="flex flex-col items-center justify-center mb-4 space-y-2">
@@ -73,7 +73,7 @@ function ProfileAccountInvestor() {
                   htmlFor="fileInput"
                   className="cursor-pointer bg-orange-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-orange-600 shadow-lg"
                 >
-                  Choose File
+                  Pilih Foto
                 </label>
                 <input
                   id="fileInput"
@@ -84,8 +84,8 @@ function ProfileAccountInvestor() {
                 />
                 <span className="text-white text-sm">
                   {profilePicture === "https://via.placeholder.com/150"
-                    ? "No file chosen"
-                    : "File chosen"}
+                    ? "Tidak ada foto"
+                    : "Foto tersedia"}
                 </span>
               </div>
 
@@ -157,7 +157,7 @@ function ProfileAccountInvestor() {
                 onClick={handleSaveChanges}
                 className="bg-orange-600 border text-sm text-white px-4 py-2 rounded-lg mt-4 hover:bg-orange-800"
               >
-                Save Changes
+                Simpan Perubahan
               </button>
             </div>
           </div>
@@ -165,46 +165,46 @@ function ProfileAccountInvestor() {
           {/* Settings */}
           <div className="p-4 border-l-2 border-orange-400">
             <h3 className="font-semibold text-xl border border-orange-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-orange-600 to-orange-300 p-2">
-              Application Settings
+              Pengaturan Aplikasi
             </h3>
             <div className="mt-4 space-y-4 bg-gradient-to-tr from-orange-600 to-orange-300 p-4 rounded-lg text-white">
               <div className="flex items-center justify-between">
-                <span>Notify me when new updates are available</span>
+                <span>Beritahu Saya Tentang Perubahan Pengaturan</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
-                <span>Send email updates</span>
+                <span>Kirim Notifikasi melalui Email</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
-                <span>Show online status</span>
+                <span>Perlihatkan status aktivitas</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
-                <span>Enable dark mode</span>
+                <span>Perlihatkan notifikasi baru</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
-                <span>Allow push notifications</span>
+                <span>Izinkan pengiriman notifikasi</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
                 </label>
               </div>
               <div className="flex items-center justify-between">
-                <span>Receive monthly reports</span>
+                <span>Terima laporan bulanan</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-orange-600 after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>

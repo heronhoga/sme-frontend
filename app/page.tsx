@@ -94,10 +94,10 @@ function Home() {
             className="text-justify md:mt-10 ml-10 sm:ml-24 md:ml-40 md:w-1/2"
           >
             <h1
-              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl"
+              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl text-left"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
             >
-              Foster Your Potential With US!
+              Kembangkan Potensimu Bersama Kami!
             </h1>
 
             <p className="mt-10 text-white font-semibold text-xl sm:text-2xl md:text-3xl">

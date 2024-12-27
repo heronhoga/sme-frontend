@@ -76,7 +76,7 @@ function Ukm() {
                 onClick={() => (window.location.href = `/ukm/${card.id}`)}
                 className="mt-4 px-4 py-2 bg-orange-600 text-white text-sm rounded-lg hover:bg-orange-700"
               >
-                View Details
+                Lihat detail
               </button>
 
               {/* invest status */}
