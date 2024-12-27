@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "investor",
+      "first_name": "John",
+      "last_name": "Investor",
+      "email": "investor@gmail.com",
+      "password": "investor",
+      "role": "investor"
+    },
+    {
+      "id": 2,
+      "username": "ukm",
+      "first_name": "Ray",
+      "last_name": "Ukm",
+      "email": "ukm@gmail.com",
+      "password": "ukm",
+      "role": "ukm"
+    }
+  ]
+}

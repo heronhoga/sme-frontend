@@ -61,18 +61,31 @@ function Home() {
           <nav className="ml-auto hidden sm:block">
             <ul className="mr-8 text-lg sm:text-xl md:text-2xl">
               <li className="inline-block mr-8">
-                <Link href="/">Beranda</Link>
+                <Link href="/">
+                  <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
+                    Beranda
+                  </p>
+                </Link>
               </li>
               <li className="inline-block mr-8">
-                <Link href="/tentang-kami">Tentang Kami</Link>
+                <Link href="/tentang-kami">
+                  <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
+                    Tentang Kami
+                  </p>
+                </Link>
               </li>
               <li className="inline-block mr-8">
-                <Link href="/login">Masuk</Link>
+                <Link href="/login">
+                  <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
+                    Masuk
+                  </p>
+                </Link>
               </li>
               <li className="inline-block mr-4">
                 <Link
                   href="/register"
-                  className="border border-white p-5 rounded-xl"
+                  className="border border-2 border-white p-5 rounded-xl"
+                  style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}
                 >
                   Daftar
                 </Link>
@@ -128,14 +141,13 @@ function Home() {
             />
           </div>
         </div>
-
       </div>
 
       <footer className="bg-gray-800 text-white p-4 text-center">
-          <div>
-            <p>&copy; 2024 Niago. All rights reserved.</p>
-          </div>
-        </footer>
+        <div>
+          <p>&copy; 2024 Niago. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }

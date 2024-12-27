@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, FormEvent } from "react";
-import { login } from "../api/auth";
+import React, { useState, FormEvent } from "react"; 
 import {
   AlertDialog,
   AlertDialogAction,
@@ -15,11 +14,11 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
+import userData from "@/data/user.json";
+
 interface LoginResponse {
-  status: number;
   data?: {
     data: any;
-    token: string;
     username: string;
     role: string;
   };
@@ -40,22 +39,24 @@ function Login() {
     setLoading(true);
 
     try {
-      const response: LoginResponse = await login(username, password);
-
-      if (response.status === 200 && response.data) {
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("username", response.data.data.username);
-        localStorage.setItem("firstName", response.data.data.first_name);
-        localStorage.setItem("lastName", response.data.data.last_name);
-
-        setRole(response.data.data.role);
-        localStorage.setItem("role", response.data.data.role);
-        setShowDialog(true);
-      } else if (response.status === 400 || !response.data) {
+      // match username and password from userData.json
+      const user = userData.users.find(
+        (user) => user.username === username && user.password === password
+      );
+      
+      if (!user) {
         setErrorDialog(true);
-      } else {
-        console.log(response);
+        return;
       }
+
+      setRole(user.role);
+      setShowDialog(true);
+      // set data to local storage
+      localStorage.setItem("username", user.username);
+      localStorage.setItem("role", user.role);
+      localStorage.setItem("firstName", user.first_name);
+      localStorage.setItem("lastName", user.last_name);
+      localStorage.setItem("email", user.email);
     } catch (err) {
       console.log("Error:", err);
     } finally {

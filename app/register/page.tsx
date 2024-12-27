@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import userData from "@/data/user.json";
 
 function Register() {
   const [loading, setLoading] = useState(false);
@@ -43,21 +44,9 @@ function Register() {
     setLoading(true);
 
     try {
-      const response = await register(formData);
-
-      if (response.status === 200) {
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("username", response.data.data.username);
-        localStorage.setItem("firstName", response.data.data.first_name);
-        localStorage.setItem("lastName", response.data.data.last_name);
-
-        localStorage.setItem("role", response.data.data.role);
-
-        setRole(response.data.data.role);
+      //set role to state
+      setRole(formData.role);
         setShowDialog(true);
-      } else {
-        console.log(response);
-      }
     } catch (err) {
       console.log("Error:", err);
     } finally {
@@ -68,8 +57,18 @@ function Register() {
   const handleDialogConfirm = () => {
     console.log("Role inside dialog:", role);
     if (role === "ukm") {
+      localStorage.setItem("username", userData.users[1].username);
+      localStorage.setItem("role", userData.users[1].role);
+      localStorage.setItem("firstName", userData.users[1].first_name);
+      localStorage.setItem("lastName", userData.users[1].last_name);
+      localStorage.setItem("email", userData.users[1].email);
       router.push("/home/ukm");
     } else if (role === "investor") {
+      localStorage.setItem("username", userData.users[0].username);
+      localStorage.setItem("role", userData.users[0].role);
+      localStorage.setItem("firstName", userData.users[0].first_name);
+      localStorage.setItem("lastName", userData.users[0].last_name);
+      localStorage.setItem("email", userData.users[0].email);
       router.push("/home/investor");
     }
     setShowDialog(false);
@@ -120,7 +119,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nama depan"
-              required
+              
             />
           </div>
 
@@ -139,7 +138,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nama belakang"
-              required
+              
             />
           </div>
 
@@ -158,7 +157,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan Email"
-              required
+              
             />
           </div>
 
@@ -177,7 +176,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nomor telepon"
-              required
+              
             />
           </div>
 
@@ -196,7 +195,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan username"
-              required
+              
             />
           </div>
 
@@ -215,7 +214,7 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan password"
-              required
+              
             />
           </div>
 
@@ -232,7 +231,7 @@ function Register() {
               value={formData.role}
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
-              required
+              
             >
               <option value="ukm">UKM</option>
               <option value="investor">Investor</option>
