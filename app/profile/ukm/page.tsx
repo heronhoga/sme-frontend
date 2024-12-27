@@ -165,7 +165,7 @@ function ProfileAccountUkm() {
           {/* Settings */}
           <div className="p-4 border-l-2 border-blue-400">
             <h3 className="font-semibold text-xl border border-blue-400 text-center rounded-lg shadow-lg text-white bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-2">
-              Application Settings
+              Pengaturan Aplikasi
             </h3>
             <div className="mt-4 space-y-4 bg-gradient-to-tr from-[#209cff] to-[#68e0cf] p-4 rounded-lg text-white">
               <div className="flex items-center justify-between">

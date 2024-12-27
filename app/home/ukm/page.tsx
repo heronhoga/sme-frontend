@@ -44,9 +44,9 @@ function HomeUkm() {
     setEndDate2(new Date(endDate2.setDate(endDate2.getDate() + shiftDays)));
   };
 
-  const [selected, setSelected] = useState("Day");
+  const [selected, setSelected] = useState("Harian");
 
-  const buttons = ["Day", "Week", "Month", "Year"];
+  const buttons = ["Harian", "Mingguan", "Bulanan", "Tahunan"];
 
   return (
     <div className="flex min-h-screen">
@@ -54,7 +54,7 @@ function HomeUkm() {
       <UkmSidebar username={username} />
 
       {/* Main Content */}
-      <div className="flex-1 p-4">
+      <div className="flex-1 p-4 max-w-screen-lg">
         <div id="navbar">
           <div className="flex items-center justify-between bg-gradient-to-t from-[#209cff] to-[#68e0cf] p-4 rounded shadow-md">
             <h1 className="text-2xl font-bold text-white">Ukm - {firstName} {lastName}</h1>
@@ -69,7 +69,7 @@ function HomeUkm() {
             id="header-text"
             className="text-center text-lg font-bold italic"
           >
-            Your Business Performance
+            Performa Usaha Anda
           </div>
           <div className="flex justify-between w-full mt-2 space-x-2">
             <div className="flex-1 border-2 border-blue-300 p-1 rounded-lg">
@@ -178,19 +178,19 @@ function HomeUkm() {
                 <table className="min-w-full border-collapse border border-blue-300">
                   <thead>
                     <tr>
-                      <th className="border border-blue-300 p-2 text-left">
-                        Name
+                      <th className="border border-blue-300 p-1 text-left">
+                        Nama
                       </th>
-                      <th className="border border-blue-300 p-2 text-left">
-                        Sales
+                      <th className="border border-blue-300 p-1 text-left">
+                        Penjualan
                       </th>
-                      <th className="border border-blue-300 p-2 text-left">
-                        Cost
+                      <th className="border border-blue-300 p-1 text-left">
+                        Pengeluaran
                       </th>
-                      <th className="border border-blue-300 p-2 text-left">
-                        Profit
+                      <th className="border border-blue-300 p-1 text-left">
+                        Keuntungan
                       </th>
-                      <th className="border border-blue-300 p-2 text-left">
+                      <th className="border border-blue-300 p-1 text-left">
                         Time Business
                       </th>
                     </tr>
@@ -237,7 +237,7 @@ function HomeUkm() {
             </div>
           </div>
           <div className="flex justify-center items-center w-full mt-2">
-            <div className="flex justify-between bg-blue-100 p-4 rounded-lg space-x-2">
+            <div className="flex justify-between bg-blue-100 p-2 rounded-lg space-x-2">
               {buttons.map((label) => (
                 <button
                   key={label}

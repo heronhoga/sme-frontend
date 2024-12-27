@@ -73,7 +73,7 @@ function InvestorSidebar({ username }: { username: string }) {
               onClick={handleLogout}
               className="shadow-md"
             >
-              Logout
+              Keluar
             </Button>
           </Link>
         </div>
