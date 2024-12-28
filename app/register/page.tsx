@@ -46,7 +46,7 @@ function Register() {
     try {
       //set role to state
       setRole(formData.role);
-        setShowDialog(true);
+      setShowDialog(true);
     } catch (err) {
       console.log("Error:", err);
     } finally {
@@ -91,17 +91,20 @@ function Register() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
       <div
         id="register-card"
-        className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-4"
+        className="h-auto bg-white border border-slate-300 shadow-lg rounded-lg mx-4 p-2 md:p-4"
       >
-    <div className="relative flex items-center justify-center mb-3">
-      <div className="absolute left-0 flex items-center">
-        <Link href="/" className="flex items-center text-black hover:underline">
-          <ChevronLeft className="mr-2 text-xl" />
-          <h3 className="text-sm">Kembali</h3>
-        </Link>
-      </div>
-      <h2 className="text-2xl font-semibold text-center">Daftar</h2>
-    </div>
+        <div className="relative flex items-center justify-center mb-3">
+          <div className="absolute left-0 flex items-center">
+            <Link
+              href="/"
+              className="flex items-center text-black hover:underline"
+            >
+              <ChevronLeft className="mr-2 text-xl" />
+              <h3 className="text-sm">Kembali</h3>
+            </Link>
+          </div>
+          <h2 className="text-2xl font-semibold text-center">Daftar</h2>
+        </div>
         <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 mt-8">
           {/* Form fields */}
           <div className="mb-1">
@@ -119,7 +122,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nama depan"
-              
             />
           </div>
 
@@ -138,7 +140,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nama belakang"
-              
             />
           </div>
 
@@ -157,7 +158,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan Email"
-              
             />
           </div>
 
@@ -176,7 +176,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan nomor telepon"
-              
             />
           </div>
 
@@ -195,7 +194,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan username"
-              
             />
           </div>
 
@@ -214,7 +212,6 @@ function Register() {
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
               placeholder="Masukkan password"
-              
             />
           </div>
 
@@ -231,7 +228,6 @@ function Register() {
               value={formData.role}
               onChange={handleChange}
               className="mt-2 w-full p-3 border border-slate-300 rounded-md"
-              
             >
               <option value="ukm">UKM</option>
               <option value="investor">Investor</option>

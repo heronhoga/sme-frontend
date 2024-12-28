@@ -20,14 +20,14 @@ function Home() {
           className="text-white flex items-center font-semibold"
         >
           <Image
-            className="w-24 sm:w-32 md:w-44 ml-10"
+            className="w-24 sm:w-32 md:w-36 ml-10"
             src="/images/icon.png"
             alt="Logo"
             width={1000}
             height={1000}
           />
 
-          <div className="ml-auto sm:hidden">
+          <div className="ml-auto md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -45,9 +45,15 @@ function Home() {
                   </svg>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
+              <DropdownMenuContent className="w-56 mr-4">
                 <DropdownMenuLabel>Menu</DropdownMenuLabel>
                 <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Link href="/">Beranda</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/tentang-kami">Tentang Kami</Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="/login">Masuk</Link>
                 </DropdownMenuItem>
@@ -58,23 +64,23 @@ function Home() {
             </DropdownMenu>
           </div>
 
-          <nav className="ml-auto hidden sm:block">
+          <nav className="ml-auto hidden md:block">
             <ul className="mr-8 text-lg sm:text-xl md:text-2xl">
-              <li className="inline-block mr-8">
+              <li className="inline-block mr-4">
                 <Link href="/">
                   <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
                     Beranda
                   </p>
                 </Link>
               </li>
-              <li className="inline-block mr-8">
+              <li className="inline-block mr-4">
                 <Link href="/tentang-kami">
                   <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
                     Tentang Kami
                   </p>
                 </Link>
               </li>
-              <li className="inline-block mr-8">
+              <li className="inline-block mr-4">
                 <Link href="/login">
                   <p style={{ textShadow: "1px 2px 1px rgba(0, 0, 0, 1)" }}>
                     Masuk

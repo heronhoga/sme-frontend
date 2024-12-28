@@ -84,7 +84,7 @@ function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-t from-[#209cff] to-[#68e0cf]">
       <div
         id="login-card"
-        className="w-96 h-auto bg-white border border-slate-300 shadow-lg rounded-lg p-4"
+        className="w-96 h-auto bg-white border border-slate-300 shadow-lg rounded-lg mx-4 p-2 md:p-4"
       >
         <div className="relative flex items-center justify-center mb-3">
           <div className="absolute left-0 flex items-center">
@@ -193,7 +193,9 @@ function Login() {
           >
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle className="text-center border p-2 rounded-lg border-black">Informasi Penting !</AlertDialogTitle>
+                <AlertDialogTitle className="text-center border p-2 rounded-lg border-black">
+                  Informasi Penting !
+                </AlertDialogTitle>
                 <AlertDialogDescription className="text-black font-semibold">
                   Karena ini merupakan aplikasi demo, mohon masukkan data
                   berikut sesuai dengan role yang akan dicoba. <br /> <br />{" "}
