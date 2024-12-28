@@ -54,16 +54,18 @@ function HomeUkm() {
       <UkmSidebar username={username} />
 
       {/* Main Content */}
-      <div className="flex-1 p-4 max-w-screen-lg">
+      <div className="flex-1 p-4">
         <div id="navbar">
           <div className="flex items-center justify-between bg-gradient-to-t from-[#209cff] to-[#68e0cf] p-4 rounded shadow-md">
-            <h1 className="text-2xl font-bold text-white">Ukm - {firstName} {lastName}</h1>
+            <h1 className="text-2xl font-bold text-white">
+              Ukm - {firstName} {lastName}
+            </h1>
           </div>
         </div>
 
         <div
           id="main-details-content"
-          className="border-2 border-gray-200 rounded-lg m-4 h-[500px] p-2 overflow-y-auto flex flex-col items-center justify-start"
+          className="border-2 border-gray-200 rounded-lg m-4 h-auto p-2 overflow-y-auto flex flex-col items-center justify-start"
         >
           <div
             id="header-text"
@@ -71,8 +73,8 @@ function HomeUkm() {
           >
             Performa Usaha Anda
           </div>
-          <div className="flex justify-between w-full mt-2 space-x-2">
-            <div className="flex-1 border-2 border-blue-300 p-1 rounded-lg">
+          <div className="flex flex-wrap justify-between w-full mt-2 space-x-0 space-y-4 md:space-y-0 md:space-x-2">
+            <div className="flex-1 min-w-[280px] border-2 border-blue-300 p-1 rounded-lg">
               <div className="mb-4 flex items-center justify-center space-x-4">
                 <button
                   onClick={() => shiftDates1("backward")}
@@ -98,7 +100,6 @@ function HomeUkm() {
                   <p className="text-blue-400">Traffic</p>
                   <p className="text-blue-400">2,000</p>
                 </div>
-
                 <div
                   id="sales"
                   className="border border-blue-400 rounded-lg p-1 text-center shadow-lg flex-1"
@@ -106,7 +107,6 @@ function HomeUkm() {
                   <p className="text-blue-400">Sales</p>
                   <p className="text-blue-400">1,210</p>
                 </div>
-
                 <div
                   id="conversion"
                   className="border border-blue-400 rounded-lg p-1 text-center shadow-lg flex-1"
@@ -119,7 +119,7 @@ function HomeUkm() {
                 <UkmBarChart data={undefined} options={undefined} />
               </div>
             </div>
-            <div className="flex-1 border-2 border-blue-300 p-1 rounded-lg">
+            <div className="flex-1 min-w-[280px] border-2 border-blue-300 p-1 rounded-lg">
               <div className="mb-4 flex items-center justify-center space-x-4">
                 <button
                   onClick={() => shiftDates2("backward")}
@@ -145,7 +145,6 @@ function HomeUkm() {
                   <p className="text-blue-400">Traffic</p>
                   <p className="text-blue-400">2,000</p>
                 </div>
-
                 <div
                   id="sales"
                   className="border border-blue-400 rounded-lg p-1 text-center shadow-lg flex-1"
@@ -153,7 +152,6 @@ function HomeUkm() {
                   <p className="text-blue-400">Sales</p>
                   <p className="text-blue-400">1,210</p>
                 </div>
-
                 <div
                   id="conversion"
                   className="border border-blue-400 rounded-lg p-1 text-center shadow-lg flex-1"
@@ -166,15 +164,15 @@ function HomeUkm() {
                 <UkmBarChart data={undefined} options={undefined} />
               </div>
             </div>
-            <div className="flex-1 border-2 border-blue-300 p-1 rounded-lg text-blue-400 relative">
+            <div className="flex-1 min-w-[280px] border-2 border-blue-300 p-1 rounded-lg text-blue-400 ">
               <div className="flex justify-between items-center">
-                <span>Performance MSMEs</span>
+                <span>Rekap Performa Usaha</span>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                  Download
+                  Unduh
                 </button>
               </div>
               <div className="mt-4">{currentDate}</div>
-              <div id="table" className=" overflow-auto">
+              <div id="table" className="overflow-auto">
                 <table className="min-w-full border-collapse border border-blue-300">
                   <thead>
                     <tr>
@@ -236,20 +234,23 @@ function HomeUkm() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center w-full mt-2">
-            <div className="flex justify-between bg-blue-100 p-2 rounded-lg space-x-2">
-              {buttons.map((label) => (
-                <button
-                  key={label}
-                  onClick={() => setSelected(label)}
-                  className={`p-2 rounded-lg ${
-                    selected === label
-                      ? "bg-blue-400 text-white"
-                      : "bg-white text-blue-400 border border-blue-400"
-                  }`}
+
+          <div className="flex-1 min-w-[280px] border-2 border-blue-300 p-1 rounded-lg text-blue-400 mt-2">
+            <div className="flex space-x-2">
+              {buttons.map((button) => (
+                <div
+                  key={button}
+                  onClick={() => setSelected(button)}
+                  className={`cursor-pointer py-1 px-3 rounded-lg text-center 
+              ${
+                selected === button
+                  ? "bg-blue-400 text-white"
+                  : "border-2 border-blue-300 text-blue-400"
+              }
+              transition duration-200`}
                 >
-                  {label}
-                </button>
+                  {button}
+                </div>
               ))}
             </div>
           </div>
