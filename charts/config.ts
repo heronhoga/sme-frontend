@@ -100,3 +100,50 @@ export const ukmBarChartData = {
   ],
 };
 //UKM BAR CHART
+export const lineChartOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    tooltip: {
+      enabled: true,
+    },
+  },
+  scales: {
+    y: {
+      beginAtZero: true, 
+    },
+  },
+};
+//LINE CHART OPTIONS
+
+//REVENUE - LINE CHART DATA
+export const revenueLineChartData = {
+  labels: [
+    "2024",
+    "2025",
+    "2026",
+    "2027",
+    "2028",
+    "2029",
+  ],
+  datasets: [
+    {
+      label: "Revenue",
+      data: [90, 88, 87, 92, 95, 102],
+      backgroundColor: "rgba(255, 0, 0, 0.2)",
+      borderColor: "rgb(255, 0, 0)",
+      borderWidth: 1,
+    },
+    {
+      label: "Cost",
+      data: [60, 54, 52, 64, 70, 76],
+      backgroundColor: "rgba(255, 153, 0, 0.2)",
+      borderColor: "rgba(255, 153, 0, 1)",
+      borderWidth: 1,
+    }
+  ],
+}
+//END REVENUE - LINECHART DATA
+
