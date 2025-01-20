@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import UkmSidebar from "@/my-components/ukm-sidebar";
 import LineChart from "@/charts/lineChart";
-import { lineChartOptions, revenueLineChartData, netProfitLineChartData } from "@/charts/config";
+import {
+  lineChartOptions,
+  revenueLineChartData,
+  netProfitLineChartData,
+} from "@/charts/config";
 
 function IncomeStatement() {
   const [username, setUsername] = useState<string>("");
@@ -46,18 +50,26 @@ function IncomeStatement() {
               className="border border-gray-300 p-4 w-full bg-white rounded shadow items-center justify-center"
             >
               <div className="flex justify-center items-center w-full max-w-md mx-auto gap-x-2">
-                <div className="border border-black rounded-sm p-3">2024</div>
-                <div className="border border-black rounded-sm p-3">2023</div>
-                <div className="border border-black rounded-sm p-3">2022</div>
-                <div className="border border-black rounded-sm p-3">etc</div>
+                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                  2024
+                </div>
+                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                  2023
+                </div>
+                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                  2022
+                </div>
+                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                  Lainnya
+                </div>
               </div>
               <table className="table-auto w-full border-collapse border border-gray-300 mt-5">
                 <thead>
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2">
+                    <th className="border border-gray-300 px-4 py-2 bg-black text-white">
                       Keterangan
                     </th>
-                    <th className="border border-gray-300 px-4 py-2">Jumlah</th>
+                    <th className="border border-gray-300 px-4 py-2 bg-black text-white">Jumlah</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -141,7 +153,7 @@ function IncomeStatement() {
                 </div>
               </div>
 
-              <div id="net-profit-chart" className="p-2 border border-dashed">
+              <div id="net-profit-chart" className="p-2 border border-dashed mt-5">
                 <h2 className="text-lg font-semibold mb-2 text-center">
                   Net Profit
                 </h2>
@@ -152,7 +164,6 @@ function IncomeStatement() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
