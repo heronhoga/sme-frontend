@@ -4,9 +4,12 @@ import UkmSidebar from "@/my-components/ukm-sidebar";
 import LineChart from "@/charts/lineChart";
 import {
   lineChartOptions,
-  revenueLineChartData,
+  cashInPieChartData,
   netProfitLineChartData,
+  pieChartOptions,
+  cashOutPieChartData,
 } from "@/charts/config";
+import PieChart from "@/charts/pieChart";
 
 function CashFlowStatement() {
   const [username, setUsername] = useState<string>("");
@@ -50,16 +53,16 @@ function CashFlowStatement() {
               className="border border-gray-300 p-4 w-full bg-white rounded shadow items-center justify-center"
             >
               <div className="flex justify-center items-center w-full max-w-md mx-auto gap-x-2">
-                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
+                <div className="border border-blue-400 rounded-sm p-3 bg-blue-400 text-white">
                   2024
                 </div>
-                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
+                <div className="border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   2023
                 </div>
-                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
+                <div className="border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   2022
                 </div>
-                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
+                <div className="border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   Lainnya
                 </div>
               </div>
@@ -221,30 +224,89 @@ function CashFlowStatement() {
               id="right-content"
               className="border border-gray-300 p-4 bg-white rounded shadow"
             >
-              <div id="revenue-chart" className="p-2 border border-dashed">
-                <h2 className="text-lg font-semibold mb-2 text-center">
-                  Pemasukan
-                </h2>
-                <div>
-                  <LineChart
-                    data={revenueLineChartData}
-                    options={lineChartOptions}
-                  />
+              <div className="flex justify-center items-center w-full max-w-md mx-auto gap-x-2">
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3">
+                  Filter
+                </div>
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
+                  Bulanan
+                </div>
+                <div className="border border-blue-400 rounded-sm p-3 bg-blue-400 text-white">
+                  Tahunan
                 </div>
               </div>
 
-              <div
-                id="net-profit-chart"
-                className="p-2 border border-dashed mt-5"
-              >
-                <h2 className="text-lg font-semibold mb-2 text-center">
-                  Net Profit
-                </h2>
-                <div>
-                  <LineChart
-                    data={netProfitLineChartData}
-                    options={lineChartOptions}
-                  />
+              <div className="flex items-center w-full mx-auto justify-around gap-x-2 mt-5">
+                <div className="border w-full border-blue-400 bg-blue-400 text-white p-4 text-center rounded-lg">
+                  Arus Kas dari Aktivitas Operasi
+                </div>
+              </div>
+
+              <div className="flex items-center w-full mx-auto justify-around mt-5">
+                <div className="border w-2/3 border-blue-400 p-2 text-center">
+                  Total Pemasukan
+                </div>
+                <div className="border w-1/3 border-blue-400  p-2 text-center">
+                  90
+                </div>
+              </div>
+              <div className="flex items-center w-full mx-auto justify-around">
+                <div className="border w-2/3 border-blue-400 p-2 text-center">
+                  Total Pengeluaran
+                </div>
+                <div className="border w-1/3 border-blue-400  p-2 text-center">
+                  76
+                </div>
+              </div>
+              <div className="flex items-center w-full mx-auto justify-around">
+                <div className="border w-2/3 border-blue-400 p-2 text-center">
+                  Total Arus Kas Bersih
+                </div>
+                <div className="border w-1/3 border-blue-400  p-2 text-center">
+                  55
+                </div>
+              </div>
+              <div className="flex items-center w-full mx-auto justify-around">
+                <div className="border w-2/3 border-blue-400 p-2 text-center">
+                  Saldo Akhir Kas
+                </div>
+                <div className="border w-1/3 border-blue-400  p-2 text-center">
+                  88
+                </div>
+              </div>
+
+              <h2 className="text-lg font-semibold text-center mt-5">
+                Proporsi
+              </h2>
+              <div className="flex flex-row gap-x-2 p-2">
+                <div
+                  id="revenue-chart"
+                  className="p-2 border border-dashed mt-5"
+                >
+                  <h2 className="text-lg font-semibold mb-2 text-center">
+                    Arus Kas Masuk
+                  </h2>
+                  <div>
+                    <PieChart
+                      data={cashInPieChartData}
+                      options={pieChartOptions}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="net-profit-chart"
+                  className="p-2 border border-dashed mt-5"
+                >
+                  <h2 className="text-lg font-semibold mb-2 text-center">
+                    Arus Kas Keluar
+                  </h2>
+                  <div>
+                    <PieChart
+                      data={cashOutPieChartData}
+                      options={pieChartOptions}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

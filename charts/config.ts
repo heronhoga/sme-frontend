@@ -169,3 +169,56 @@ export const netProfitLineChartData = {
 }
 //END NET PROFIT - LINE CHART DATA
 
+
+//PIE CHART OPTIONS
+export const pieChartOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    tooltip: {
+      enabled: true,
+    },
+  },
+};
+
+
+//END PIE CHART OPTIONS
+
+//CASH IN - PIE CHART DATA
+export const cashInPieChartData = {
+  labels: ["Pendapatan Lain", "Pelepasan Aset", "Penyertaan Modal", "Penjualan"],
+  datasets: [
+    {
+      data: [10.3, 10.3, 2.6, 76.9],
+      backgroundColor: [
+        'rgb(0, 153, 255)',
+        'rgb(15, 251, 255)',
+        'rgb(15, 255, 151)',
+        'rgb(255, 162, 0)',
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+//END CASH IN - PIE CHART DATA
+
+//CASH OUT - PIE CHART DATA
+export const cashOutPieChartData = {
+  labels: ["Biaya Pemasaran", "Dividen", "Gaji", "Bahan Baku"],
+  datasets: [
+    {
+      data: [19.7, 14.5, 26.5, 39.5],
+      backgroundColor: [
+        'rgb(0, 153, 255)',
+        'rgb(15, 251, 255)',
+        'rgb(15, 255, 151)',
+        'rgb(255, 162, 0)',
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+//END CASH OUT - PIE CHART DATA
+
