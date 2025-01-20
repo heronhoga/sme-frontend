@@ -132,18 +132,40 @@ export const revenueLineChartData = {
     {
       label: "Revenue",
       data: [90, 88, 87, 92, 95, 102],
-      backgroundColor: "rgba(255, 0, 0, 0.2)",
+      backgroundColor: "rgb(255, 0, 0)",
       borderColor: "rgb(255, 0, 0)",
       borderWidth: 1,
     },
     {
       label: "Cost",
       data: [60, 54, 52, 64, 70, 76],
-      backgroundColor: "rgba(255, 153, 0, 0.2)",
+      backgroundColor: "rgba(255, 153, 0, 1)",
       borderColor: "rgba(255, 153, 0, 1)",
       borderWidth: 1,
     }
   ],
 }
-//END REVENUE - LINECHART DATA
+//END REVENUE - LINE CHART DATA
+
+//NET PROFIT - LINE CHART DATA
+export const netProfitLineChartData = {
+  labels: [
+    "2024",
+    "2025",
+    "2026",
+    "2027",
+    "2028",
+    "2029",
+  ],
+  datasets: [
+    {
+      label: "Net Profit",
+      data: [20, 17, 16, 19, 21, 24],
+      backgroundColor: "rgb(102, 204, 255)",
+      borderColor: "rgb(102, 204, 255)",
+      borderWidth: 1,
+    }
+  ],
+}
+//END NET PROFIT - LINE CHART DATA
 

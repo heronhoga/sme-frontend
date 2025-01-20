@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import UkmSidebar from "@/my-components/ukm-sidebar";
 import LineChart from "@/charts/lineChart";
-import { lineChartOptions, revenueLineChartData } from "@/charts/config";
+import { lineChartOptions, revenueLineChartData, netProfitLineChartData } from "@/charts/config";
 
 function IncomeStatement() {
   const [username, setUsername] = useState<string>("");
@@ -140,6 +140,19 @@ function IncomeStatement() {
                   />
                 </div>
               </div>
+
+              <div id="net-profit-chart" className="p-2 border border-dashed">
+                <h2 className="text-lg font-semibold mb-2 text-center">
+                  Net Profit
+                </h2>
+                <div>
+                  <LineChart
+                    data={netProfitLineChartData}
+                    options={lineChartOptions}
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
