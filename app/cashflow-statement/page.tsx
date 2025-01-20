@@ -40,7 +40,7 @@ function CashFlowStatement() {
         >
           <div
             id="header-text"
-            className="text-center text-lg font-bold italic"
+            className="text-center text-xl font-bold italic border border-blue-400 rounded-lg bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-4 text-white w-full"
           >
             Laporan Keuangan
           </div>
@@ -80,20 +80,36 @@ function CashFlowStatement() {
               </div>
 
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center">Penjualan barang/jasa</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center">90</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center">
+                  Penjualan barang/jasa
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center">
+                  90
+                </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center">Pendapatan lain-lain</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center">12</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center">
+                  Pendapatan lain-lain
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center">
+                  12
+                </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center">Biaya Operasional</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center">70</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center">
+                  Biaya Operasional
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center">
+                  70
+                </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center font-bold">Arus Kas Bersih dari Operasi</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center font-bold">32</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center font-bold">
+                  Arus Kas Bersih dari Operasi
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center font-bold">
+                  32
+                </div>
               </div>
 
               <div className="flex items-center w-full mx-auto justify-around gap-x-2">
@@ -102,16 +118,28 @@ function CashFlowStatement() {
                 </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center">Pembelian Aset</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center">0</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center">
+                  Pembelian Aset
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center">
+                  0
+                </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center">Penjualan Aset</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center">12</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center">
+                  Penjualan Aset
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center">
+                  12
+                </div>
               </div>
               <div className="flex items-center w-full mx-auto justify-around">
-                <div className="border w-2/3 border-blue-400 p-4 text-center font-bold">Arus Kas Bersih dari Investasi</div>
-                <div className="border w-1/3 border-blue-400  p-4 text-center font-bold">20</div>
+                <div className="border w-2/3 border-blue-400 p-4 text-center font-bold">
+                  Arus Kas Bersih dari Investasi
+                </div>
+                <div className="border w-1/3 border-blue-400  p-4 text-center font-bold">
+                  20
+                </div>
               </div>
               {/* <table className="table-auto w-full border-collapse border border-gray-300 mt-5">
                 <thead>

@@ -40,7 +40,7 @@ function IncomeStatement() {
         >
           <div
             id="header-text"
-            className="text-center text-lg font-bold italic"
+            className="text-center text-xl font-bold italic border border-blue-400 rounded-lg bg-gradient-to-r from-[#209cff] to-[#68e0cf] p-4 text-white w-full"
           >
             Laporan Laba Rugi
           </div>
