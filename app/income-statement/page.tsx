@@ -50,26 +50,26 @@ function IncomeStatement() {
               className="border border-gray-300 p-4 w-full bg-white rounded shadow items-center justify-center"
             >
               <div className="flex justify-center items-center w-full max-w-md mx-auto gap-x-2">
-                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   2024
                 </div>
-                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   2023
                 </div>
-                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   2022
                 </div>
-                <div className="border border-black rounded-sm p-3 hover:bg-black hover:text-white">
+                <div className="text-blue-700 border border-blue-400 rounded-sm p-3 hover:bg-blue-400 hover:text-white">
                   Lainnya
                 </div>
               </div>
               <table className="table-auto w-full border-collapse border border-gray-300 mt-5">
                 <thead>
                   <tr>
-                    <th className="border border-gray-300 px-4 py-2 bg-black text-white">
+                    <th className="border border-gray-300 px-4 py-2 bg-blue-400 text-white">
                       Keterangan
                     </th>
-                    <th className="border border-gray-300 px-4 py-2 bg-black text-white">Jumlah</th>
+                    <th className="border border-gray-300 px-4 py-2 bg-blue-400 text-white">Jumlah</th>
                   </tr>
                 </thead>
                 <tbody>
