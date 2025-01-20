@@ -5,7 +5,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 //icons
-import { UserPen, BadgeDollarSignIcon, LayoutDashboard, Settings } from "lucide-react";
+import {
+  UserPen,
+  BadgeDollarSignIcon,
+  LayoutDashboard,
+  Wallet
+} from "lucide-react";
 
 function UkmSidebar({ username }: { username: string }) {
   const handleLogout = () => {
@@ -61,6 +66,13 @@ function UkmSidebar({ username }: { username: string }) {
           >
             <BadgeDollarSignIcon />
             <p className="ml-5">Laporan laba Rugi</p>
+          </Link>
+          <Link
+            href="/cashflow-statement"
+            className="py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-200 flex items-center"
+          >
+            <Wallet />
+            <p className="ml-5">Laporan keuangan</p>
           </Link>
           <hr className="my-2" />
           <Link
